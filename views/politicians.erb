@@ -1,0 +1,24 @@
+<form action="/post_politicians" method="POST">
+
+<% @politicians.each do |politician|%>
+  <ul>
+    <li>
+      <%= politician.firstname %>
+      <%= politician.lastname %>
+      <%= politician.party %>
+    </li>
+  </ul>
+  <input type="radio" name="post_politician" value="<%=politician.bioguide_id %>">
+</br>
+<% end %>
+<button>Submit Your Fav's</button>
+
+
+
+</form>
+<!-- @name = params[:name]
+  @party = params[:party]
+  @state = params[:state]
+  @twitter_id = params[:twitter_id]
+  @in_office = params[:in_office]
+  @votesmart_id = params[:votesmart_id] -->
