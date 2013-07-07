@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130703203000) do
+ActiveRecord::Schema.define(version: 20130707183403) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,16 @@ ActiveRecord::Schema.define(version: 20130703203000) do
   create_table "people", force: true do |t|
     t.string "name"
     t.string "title"
+  end
+
+  create_table "politicians", force: true do |t|
+    t.string  "firstname"
+    t.string  "lastname"
+    t.string  "party"
+    t.string  "state"
+    t.string  "twitter_id"
+    t.boolean "in_office"
+    t.string  "votesmart_id"
   end
 
   create_table "tasks", force: true do |t|
